@@ -1,0 +1,48 @@
+:root {
+  --color-success: 0 221 34;
+  --color-failure: 153 0 68;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+section {
+  display: grid;
+  gap: 1rem;
+}
+
+details {
+  padding: 1rem .5rem;
+}
+
+summary::marker {
+  content: '+';
+  margin-inline-end: 1rem;
+}
+
+[open] summary::marker {
+  content: '-';
+}
+
+details.success {
+  background-color: rgb(var(--color-success) / .3);
+}
+
+details.failure {
+  background-color: rgb(var(--color-failure) / .3);
+}
+
+dl {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  gap: .75rem .5rem;
+}
+
+dd {
+  margin-inline-start: .5rem;
+}
